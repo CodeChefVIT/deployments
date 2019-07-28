@@ -4,8 +4,9 @@ services:
     container_name: app
     restart: always
     build: .
+    command: npm start
     ports:
-      - "80:80"
+      - "81:81"
     links:
       - mongo
   mongo:
