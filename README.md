@@ -7,4 +7,5 @@
 - Red Hat Instance
 - docker-ce package
 
-### 
+### References 
+- [Deploy node.js and mongodb application](https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f)
