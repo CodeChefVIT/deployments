@@ -1,10 +1,9 @@
 FROM  node:latest
 RUN   mkdir -p /root/app/
 WORKDIR  /root/app/
+COPY  package.json  /root/app/package.json
 RUN   npm install
-#VOLUME    ./:/root/app/
-COPY    ./:/root/app/
-EXPOSE   81
-RUN   npm install express -y
+COPY    .  /root/app/
+EXPOSE   81 
 CMD  ["npm","start"]
 RUN   node app.js

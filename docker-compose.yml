@@ -4,6 +4,9 @@ services:
     container_name: app
     restart: always
     build: .
+    volumes:
+      - ./*:/root/app/
+      -  /root/app/node_modules 
     command: npm start
     ports:
       - "81:81"
