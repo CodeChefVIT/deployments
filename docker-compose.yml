@@ -6,7 +6,9 @@ services:
     build: .
     volumes:
       - ./*:/root/app/
-      -  /root/app/node_modules 
+   #   -  package.json:/root/app/package.json
+    #  -  /root/app/node_modules 
+   # copy:  ./package.json  /root/app/
     command: npm start
     ports:
       - "81:81"
