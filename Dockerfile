@@ -1,9 +1,9 @@
 FROM  node:latest
-RUN   mkdir -p /root/app
-WORKDIR  /root/app
-COPY    package.json  /root/app/package.json
+RUN   mkdir -p /app
+WORKDIR  /app
+COPY    package.json /app
 RUN   npm install
-COPY  .  /root/app/
+COPY  . /app
 EXPOSE   81 
 CMD  ["npm","start"]
-RUN   node app.js
+CMD node app.js
