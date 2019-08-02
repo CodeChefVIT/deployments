@@ -3,12 +3,7 @@ services:
   app:
     container_name: app
     restart: always
-    build: .
-    volumes:
-      - ./*:/root/app/
-   #   -  package.json:/root/app/package.json
-    #  -  /root/app/node_modules 
-   # copy:  ./package.json  /root/app/
+    image: # ADD PREBUILT IMAGE LINK HERE
     command: npm start
     ports:
       - "81:81"
@@ -18,6 +13,6 @@ services:
     container_name: mongo
     image: mongo
     volumes:
-      - ./*:/data/db
+      - .:/data/db
     ports:
       - "27017:27017"

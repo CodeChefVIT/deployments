@@ -1,8 +1,8 @@
 FROM  node:latest
-RUN   mkdir -p .
-WORKDIR  .
+RUN   mkdir -p /usr/src/app
+WORKDIR  /usr/src/app
 COPY    package.json .
 RUN   npm install
-COPY  . /app
+COPY  . .
 EXPOSE   81
 CMD  ["npm","start"]
