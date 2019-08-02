@@ -11,7 +11,7 @@
 ### References 
 - [Deploy node.js and mongodb application](https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f)
 
-### Docker image 
+### Docker image / Deployment Instructions
 - docker pull diptochakrabarty/cc-cet:v2
 - docker compose up
 - In browser go to <your ip address>:85  
