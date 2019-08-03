@@ -3,12 +3,12 @@ services:
   app:
     container_name: app
     restart: always
-    image: # ADD PREBUILT IMAGE LINK HERE
-    command: npm start
+    image: diptochakrabarty/cc-cet:v2
     ports:
-      - "81:81"
+      - "85:85"
     links:
       - mongo
+    command: npm start
   mongo:
     container_name: mongo
     image: mongo
