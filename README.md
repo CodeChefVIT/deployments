@@ -1,12 +1,5 @@
-# CET-Deployment-common entry test deployment
+# CodeChef Deployments
 
-### Aim : Deploy [Common-Entry-Test](https://github.com/CodeChefVIT/common-entry-test) on a docker Container for quick and easy Deployment of Services
-
-### System Details
-- Azure Cloud Services
-- Red Hat Instance
-- docker-ce package (installed)
-- docker-compose (installed)
-
-### References 
-- [Deploy node.js and mongodb application](https://medium.com/statuscode/dockerising-a-node-js-and-mongodb-app-d22047e2806f)
+| Project Name | Original Project | URL
+  --------------------------------------------------------------- | :------------------------------------------------------------: | :---------------------------------------------: |
+  | Common Entry Test | [Common Entry Test](https://github.com/CodeChefVIT/common-entry-test) | http://http://167.71.231.117:3002
