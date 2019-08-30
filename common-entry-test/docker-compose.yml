@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    container_name: app
+    restart: always
+    image: diptochakrabarty/cc-cet:v3
+    ports:
+      - "3002:3002"
+    links:
+      - mongo
+    command: npm start
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - .:/data/db
+    ports:
+      - "27017:27017"
