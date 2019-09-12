@@ -1,16 +1,16 @@
 version: "3"
 services:
   app:
-    container_name: app
+    container_name: hackx
     restart: always
-    image: diptochakrabarty/cc-cet:v3
+    build: .
     ports:
       - "3000:3003"
     links:
       - mongo
     command: npm start
   mongo:
-    container_name: mongo
+    container_name: mongi
     image: mongo
     volumes:
       - .:/data/db
