@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mongi:
+    container_name: mongi
+    image: mongo
+    volumes:
+      - .:/data/db
+    ports:
+      - "27017:27017"
+  hack:
+    container_name: hack
+    restart: always
+    build: .
+    ports:
+      - 3002:3000
+
