@@ -12,7 +12,3 @@
 - Now to connect the node application with the mongoDB  database 
 - Use a compose file to connect the node application with the mongoDB 
 
-
-### Refrences 
-
-- 
