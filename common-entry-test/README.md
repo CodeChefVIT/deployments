@@ -1,7 +1,7 @@
 # Docker Compose for common Entry Test
 
 - Image used is  diptochakrabarty/cc-cet:v3
-- Application is running at port 3002
+- Application is running at port 3003
 
 ### Steps taken to run this application
 
