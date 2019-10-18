@@ -13,7 +13,7 @@
 
 ### To Run of the Applications 
 - Clone this repository git clone https://github.com/CodeChefVIT/deployments 
-- cd <the-project-you-want-to-run>
+- cd (the-project-you-want-to-run)
 - run command : docker-compose up -d
 - Docker should be pre installed in your system 
 - Application is now running on its respective port 
