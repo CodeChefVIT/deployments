@@ -1,0 +1,8 @@
+version: "3"
+services:
+        monitor:
+                container_name: monitor
+                restart: always
+                image: 
+                ports: 3005:3005
+
