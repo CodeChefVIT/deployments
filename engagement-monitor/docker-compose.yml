@@ -3,9 +3,9 @@ services:
         monitor:
                 container_name: monitor
                 restart: always
-                image: engv2
+                image: diptochakrabarty/eng:v3
                 ports:
-                      - "3005:8080"
+                      - "3005:8000"
         monge:
                 container_name: monge
                 image: mongo
