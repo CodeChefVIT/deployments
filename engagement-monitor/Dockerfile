@@ -8,6 +8,5 @@ RUN pip3 install -r requirements.txt
 #WORKDIR /engagement-monitor
 RUN python3 manage.py makemigrations 
 RUN python3 manage.py migrate
-EXPOSE 3005
+EXPOSE 8080
 CMD gunicorn engagement.wsgi --bind 0.0.0.0:8000
-
