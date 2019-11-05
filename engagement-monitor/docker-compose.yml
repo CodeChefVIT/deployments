@@ -1,0 +1,15 @@
+version: "3"
+services:
+        monitor:
+                container_name: monitor
+                restart: always
+                image: diptochakrabarty/eng:v6
+                ports:
+                      - "3005:8000"
+        monge:
+                container_name: monge
+                image: mongo
+                volumes:
+                        - .:/data/db
+                ports:
+                        - "27019:27017"
