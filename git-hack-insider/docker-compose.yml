@@ -9,8 +9,8 @@ services:
       - "27017:27017"
   hack:
     container_name: hack
+    image: diptochakrabarty/hack:v2
     restart: always
-    build: .
     ports:
       - 3002:3000
 
