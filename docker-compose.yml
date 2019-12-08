@@ -1,15 +1,28 @@
-FROM  nginx
-COPY  nginx.conf    /etc/nginx/nginx.conf
-EXPOSE  80 
-[root@diptochuck nginx]# cat docker-compose.yml 
-version: "3"
+version: "3.1"
 services:
-   another: 
-        container_name: another
-        image: proxy
-        restart: always
-        volumes:
-              - /etc/nginx:/etc/nginx
-        ports:
-             - "80:80"
+  nginx:
+    container_name: nginx
+    build: 
+      context: .
+      dockerfile: Web/Dockerfile
+    ports:
+    - 80:80
+    networks:
+    - common-entry-test_default  
+    - free-slot-finder_default
+    - git-and-me-hack-insider_default
+    volumes:
+    - ./Web/nginx.conf:/etc/nginx/nginx.conf
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: on-failure
+
+
+networks:
+    common-entry-test_default:
+        external: true
+    free-slot-finder_default:
+        external: true
+    git-and-me-hack-insider_default:
+        external: true
+
 
