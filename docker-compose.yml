@@ -24,5 +24,3 @@ networks:
         external: true
     git-and-me-hack-insider_default:
         external: true
-
-
