@@ -1,15 +1,15 @@
 version: "3"
 services:
   mongi:
-    container_name: mongi
+    container_name: monge
     image: mongo
     volumes:
       - .:/data/db
     ports:
-      - "27018:27017"
+      - "27020:27017"
   hack:
     container_name: webinar
     image: webflow 
     restart: always
     ports:
-      - 3005:3000
+      - 3006:3000
