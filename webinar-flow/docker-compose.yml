@@ -9,7 +9,7 @@ services:
       - "27020:27017"
   hack:
     container_name: webinar
-    image: webflow 
+    image: webinar:v2
     restart: always
     ports:
       - 3006:3000
