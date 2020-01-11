@@ -1,15 +1,22 @@
 version: "3"
 services:
-  mongi:
-    container_name: monge
+  mongle:
+    container_name: mongle
     image: mongo
     volumes:
       - .:/data/db
     ports:
       - "27020:27017"
-  hack:
-    container_name: webinar
-    image: webinar:v2
+  webinars:
+    container_name: webflow
+    image: webinar:v2 
     restart: always
     ports:
       - 3006:3000
+  front:
+    container_name: react
+    build: ./client/
+    restart: always
+    ports:
+      - 3006:3000
+
