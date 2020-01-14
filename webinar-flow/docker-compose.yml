@@ -1,22 +1,27 @@
 version: "3"
 services:
-  mongle:
-    container_name: mongle
-    image: mongo
-    volumes:
-      - .:/data/db
-    ports:
-      - "27020:27017"
-  webinars:
-    container_name: webflow
-    image: webinar:v2 
-    restart: always
-    ports:
-      - 3006:3000
-  front:
-    container_name: react
-    build: ./client/
-    restart: always
-    ports:
-      - 3006:3000
+    frontend:
+        container_name: frontend
+ 	restart: always
+	image: react_appv3
+       
+        ports:
+            - "8080:3000"
+        volumes:
+            - ./client:/usr/src/app
+    backend:
+        container_name: backend
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        image: vikasraj/awesome_server
+        ports:
+            - "3006:3000"
+    mongli:
+        container_name: mongli
+        image: mongo
+        volumes:
+            - .:/data/db
 
+        ports:
+            - '27020:27017'
