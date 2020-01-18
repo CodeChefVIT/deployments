@@ -1,0 +1,8 @@
+FROM node:latest
+RUN   mkdir -p /react/public
+WORKDIR    /react
+COPY  build/*   /react/public/
+COPY   .  .
+RUN  npm install
+EXPOSE   3000
+CMD   ["npm","start"]
