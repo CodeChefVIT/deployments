@@ -1,0 +1,21 @@
+version: "3"
+services:
+     frontend:
+           container_name: frontend
+           restart: always
+           image: react:appv2
+           ports:
+                - "3007:3000"
+     backend:
+           container_name: backend
+           restart: always
+           image: backend:v1
+           ports:
+                - "3006:3000"
+     mongli:
+           container_name: mongli
+           image: mongo
+           volumes:
+               - .:/data/db
+           ports:
+               - "27020:27017"
